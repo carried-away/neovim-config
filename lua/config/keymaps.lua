@@ -13,9 +13,3 @@ map("n", "<leader>gh", "<cmd> Gitsigns preview_hunk <cr>", { desc = "Git Preview
 -- Navigation
 map("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true, desc = "Move Up half a page" })
 map("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true, desc = "Move Down half a page" })
-
-map("n", "<leader>gg", function()
-  require("codecompanion").prompt("commit")
-end, { noremap = true, silent = true })
-
-

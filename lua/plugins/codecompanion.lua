@@ -1,4 +1,4 @@
-local spinner = require "config.codecompanion.dot-spinner"
+-- local spinner = require "config.codecompanion.dot-spinner"
 
 return {
   "olimorris/codecompanion.nvim",
@@ -53,8 +53,15 @@ return {
   },
   lazy = true,
   keys = {
-    { "<leader>co", "<cmd>CodeCompanionChat Toggle<cr>", desc = "Code Companion: Toggle" },
-    { "<leader>cp", "<cmd>CodeCompanionActions<cr>", desc = "Code Companion: Actions" },
+    { "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", desc = "Code Companion: Toggle" },
+    { "<leader>ap", "<cmd>CodeCompanionActions<cr>",     desc = "Code Companion: Actions" },
+    {
+      "<leader>ag",
+      function()
+        require("codecompanion").prompt("commit")
+      end,
+      desc = "Code Companion: Git Commit"
+    },
   },
   cmd = {
     "CodeCompanion",
